@@ -9,21 +9,22 @@ const ProductItem = ({product}) => {
 	const {state, addToCart}=useContext(AppContext);
 	const handleClick=(item)=>{
 		addToCart(item);
+	if(!product.images[0]){
+		return null;
+		}
 	};
 	return (
 		<div className={styles.ProductItem}>
-			<Image src={product.images[0]} alt={product.title} width={240} height={240} />
+			{<Image src={product?.images[0]} alt={product?.title} width={240} height={240} />}
 			<div className={styles["product-info"]}>
 				<div>
 					<p>${product.price}</p>
 					<p>{product.title}</p>
 				</div>
 				<figure className={styles["more-clickable-area"]} 
-				onClick={() => { }}
-				onKeyPress={() => handleClick(product)}
-				aria-hidden="true">
-					{state.cart.includes(product)?<Image
-					className={[styles.disabled, styles["add-to-cart-btn"]]}
+					onClick={() => handleClick(product)}
+					aria-hidden="true">
+					{state.cart.includes(product)?<Image className={[styles.disabled, styles["add-to-cart-btn"]]}
 						src={addedToCartImage}
 						width={50}
 						height={50}

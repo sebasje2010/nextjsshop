@@ -45,15 +45,13 @@ const Header=()=>{
                 <ul>
                     <li 
                     className={styles['navbar-email']}
-                    onClick={() => { }}
-					onKeyPress={() => toggleMenu()}
+                    onClick={() => toggleMenu()}
 					aria-hidden="true">
                         email@example.com
                     </li>
                     <li 
                     className={styles['navbar-shopping-cart']} 
-                    onClick={() => { }}
-					onKeyPress={toggleOrder()}
+                    onClick={() => toggleOrder()}
 					aria-hidden="true">
                         <Image src={shoppingCart} alt="shopping cart" />
                         {state.cart.length>0? <div> {state.cart.length}</div> :null}

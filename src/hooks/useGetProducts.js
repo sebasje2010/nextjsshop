@@ -7,7 +7,10 @@ const useGetProducts = (API) => {
   useEffect(() => {
     async function fetchData() {
       const response = await axios(API);
-      setProducts(response.data);
+      const filteredProducts = response.data.filter((product) => {
+        return product.images.length > 0;
+      });
+      setProducts(filteredProducts);
     }
     fetchData();
   }, [API]);
