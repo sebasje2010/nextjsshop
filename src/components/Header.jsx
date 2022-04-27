@@ -11,13 +11,13 @@ import shoppingCart from '@icons/icon_shopping_cart.svg';
 import styles from '@styles/Header.module.scss';
 
 const Header=()=>{
-    const { state, toggleOrder, toggleMenu, toggleMobileMenu  } = useContext(AppContext);
+    const { state, toggleOrder, toggleMenu  } = useContext(AppContext);
     return(
         <>
         <nav className={styles.Nav}>
-            <img src={menu.src} alt="menu" className={styles.menu} onClick={()=>toggleMobileMenu()}/>
+            <img src={menu.src} alt="menu" className={styles.menu}/>
             <div className={styles["navbar-left"]}>
-                <Link href="/">
+                <Link href="/" passHref>
                 <img src={logo.src} alt="logo" className={styles['nav-logo']} />
                 </Link>
                 <ul>
