@@ -15,10 +15,10 @@ const Header=()=>{
     return(
         <>
         <nav className={styles.Nav}>
-            <Image src={menu} alt="menu" className={styles.menu} onClick={()=>toggleMobileMenu()}/>
+            <img src={menu.src} alt="menu" className={styles.menu} onClick={()=>toggleMobileMenu()}/>
             <div className={styles["navbar-left"]}>
-                <Link href="/" passHref>
-                <Image src={logo} alt="logo" className={styles['nav-logo']} />
+                <Link href="/">
+                <img src={logo.src} alt="logo" className={styles['nav-logo']} />
                 </Link>
                 <ul>
                     <li>

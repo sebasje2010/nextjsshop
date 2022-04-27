@@ -15,6 +15,7 @@
 	animation: swipeLeft 1s ease;
 	overflow-y: auto;
 	height: 500px;
+	z-index: 1;
 }
 .title-container {
 	display: flex;

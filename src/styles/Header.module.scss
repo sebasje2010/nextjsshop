@@ -2,13 +2,14 @@
 
 .Nav{
 	top:0;
-	width: calc(100% - 48px);
+	width: 100%;
 	display: flex;
 	position: sticky;
 	justify-content: space-between;
 	padding: 0 24px;
 	border-bottom: 1px solid $--very-light-pink;
 	background-color: white;
+	z-index: 1;
 }
 .menu {
 	display: none;
@@ -30,6 +31,9 @@
 }
 .navbar-left ul {
 	margin-left: 12px;
+}
+.navbar-right li:first-of-type{
+	margin: 0 2em 0 0;
 }
 .navbar-left ul li a,
 .navbar-right ul li a {

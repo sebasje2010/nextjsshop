@@ -11,7 +11,7 @@ const ProductList = () => {
 		<section className={styles["main-container"]}>
 			<div className={styles.ProductList}>
 				{products.map(product=>{
-					if (product.images.length>0&&product.images[0]!==''){
+					if (product.images.length>0&&product.images[0]!==''&&product.images[0].startsWith('http')) {
 						return <ProductItem product={product} key={product.id} />;}
 				})}
 			</div>
